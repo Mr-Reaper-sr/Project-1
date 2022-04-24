@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main (){
+    //No. of available seats
+    int available, book;
+    printf("No. of available seats-");
+    scanf("%d",&available);
+    //Entered by user
+    printf("Enter Number of seats to be booked-");
+    scanf("%d",&book);
+    if (available>book){
+        printf("No. of taxi timings available\n");
+        printf("1)0830 HRS\n2)1330 HRS\n3)1520 HRS\n4)1940 HRS\n\n");
+        int time;
+        printf("Select Option for Required Time-");
+        scanf("%d",&time);
+        int timing;
+        if (time==1){
+            timing= 0830;
+        }else if (time==2){
+            timing= 1330;
+        }else if (time==3){
+            timing= 1520;
+        }else if (time==4){
+            timing= 1940;}
+        char name[500];
+        printf("Enter Your Name-");
+        scanf("%s",&name);
+        int price=250;
+        printf("\nTHE BILL\nName-%s\nTiming-%dHRS\nPrice-%dRS",name,timing,price*book);
+    }
+    else{
+        printf("SORRY\nSeats Not Availible");
+    }    
+    return 0;    
+}
